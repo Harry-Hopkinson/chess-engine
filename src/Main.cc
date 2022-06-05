@@ -1,7 +1,3 @@
-// hello world program
-
-#include <iostream>
-
 #include <iostream>
 
 int main() {
