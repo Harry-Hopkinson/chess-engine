@@ -1,16 +1,22 @@
-#include "Board.h"
+#include "Board.hh"
 #include <iostream>
 
-void printBoard(Game & game) {
-  cout << "   A     B     C     D     E     F     G     H\n\n";
+void printBoard(Game& game)
+{
+   cout << "   A     B     C     D     E     F     G     H\n\n";
 
-  for (int iLine = 7; iLine >= 0; iLine--) {
-    if (iLine % 2 == 0) {
-      printLine(iLine, BLACK_SQUARE, WHITE_SQUARE, game);
-    } else {
-      printLine(iLine, WHITE_SQUARE, BLACK_SQUARE, game);
-    }
-  }
+   for (int iLine = 7; iLine >= 0; iLine--)
+   {
+      if ( iLine%2 == 0)
+      {
+         printLine(iLine, BLACK_SQUARE, WHITE_SQUARE, game);
+      }
+
+      else
+      {
+         printLine(iLine, WHITE_SQUARE, BLACK_SQUARE, game);
+      }
+   }
 }
 
 void printLine(int iLine, int iColour1, int iColour2, Game & game) {
